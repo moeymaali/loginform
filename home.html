@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Susu Horizon Travel</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="new-home-page">
+
+    
+    <nav class="hotel-navbar">
+
+        <a href="home.html" class="hotel-logo">
+            <img src="fotos/logo.png" alt="Susu Horizon Logo">
+        </a>
+
+        <div class="hotel-nav-links">
+
+            <a href="home.html" class="active">
+                Home
+            </a>
+
+            <a href="#popularDestinations">
+                Destinations
+            </a>
+
+            <a href="hotels.html">
+                Hotels
+            </a>
+
+        </div>
+
+        <div class="hotel-nav-right">
+
+            <select class="language" id="language">
+                <option value="en">EN</option>
+                <option value="nl">NL</option>
+            </select>
+
+            <button>
+                Contact Us
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <section class="home-new-hero">
+
+        <div class="home-new-overlay"></div>
+
+        <div class="home-new-hero-text">
+
+            <p class="home-small-title">
+                EXPLORE THE WORLD
+            </p>
+
+            <h1>
+                Discover Your Next
+                <br>
+                Adventure
+            </h1>
+
+            <p>
+                Discover beautiful destinations and create
+                unforgettable travel experiences.
+            </p>
+
+            <a href="#destinationSearch" class="home-explore-button">
+                Explore Destinations →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <section
+        class="hotel-search-box home-search"
+        id="destinationSearch"
+    >
+
+       
+        <div class="hotel-search-item">
+
+            <label>Destination</label>
+
+            <select id="destination">
+
+                <option value="">
+                    Choose destination
+                </option>
+
+                <option value="dubai">
+                    Dubai
+                </option>
+
+                <option value="maldives">
+                    Maldives
+                </option>
+
+                <option value="somalia">
+                    Somalia
+                </option>
+
+                <option value="kurdistan">
+                    Kurdistan
+                </option>
+
+            </select>
+
+        </div>
+
+
+       
+        <div class="hotel-search-item">
+
+            <label>When Start?</label>
+
+            <input
+                type="date"
+                id="travelDate"
+            >
+    
+
+        </div>
+
+
+        
+        <div class="hotel-search-item">
+
+            <label>Budget</label>
+
+            <select id="price">
+
+                <option value="">
+                    Select Price
+                </option>
+
+                <option value="€0 - €500">
+                    €0 - €500
+                </option>
+
+                <option value="€500 - €1000">
+                    €500 - €1000
+                </option>
+
+                <option value="€1000 - €2000">
+                    €1000 - €2000
+                </option>
+
+            </select>
+
+        </div>
+
+
+       
+        <button
+            type="button"
+            class="hotel-search-button"
+            id="searchButton"
+        >
+            Search
+        </button>
+
+    </section>
+
+
+   
+    <section
+        class="home-popular-destinations"
+        id="popularDestinations"
+    >
+
+        <div class="home-section-title">
+
+            <div>
+                <p class="home-small-title">
+                    EXPLORE
+                </p>
+
+                <h2>
+                    Popular Destinations
+                </h2>
+
+                <p>
+                    Discover some of our beautiful destinations.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="home-destination-grid">
+
+
+            
+            <a
+                href="dubai.html"
+                class="home-destination-card"
+            >
+
+                <img
+                    src="fotos/dubai/marina.png"
+                    alt="Dubai"
+                >
+
+                <div class="home-destination-overlay"></div>
+
+                <div class="home-destination-info">
+
+                    <p>United Arab Emirates</p>
+
+                    <h3>Dubai</h3>
+
+                    <span>
+                        Explore →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            
+            <a
+                href="maldives.html"
+                class="home-destination-card"
+            >
+
+                <img
+                    src="fotos/maldives/Ari.jpg"
+                    alt="Maldives"
+                >
+
+                <div class="home-destination-overlay"></div>
+
+                <div class="home-destination-info">
+
+                    <p>Indian Ocean</p>
+
+                    <h3>Maldives</h3>
+
+                    <span>
+                        Explore →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            
+            <a
+                href="somalia.html"
+                class="home-destination-card"
+            >
+
+                <img
+                    src="fotos/somalia/liido.png"
+                    alt="Somalia"
+                >
+
+                <div class="home-destination-overlay"></div>
+
+                <div class="home-destination-info">
+
+                    <p>East Africa</p>
+
+                    <h3>Somalia</h3>
+
+                    <span>
+                        Explore →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            
+            <a
+                href="kurdistan.html"
+                class="home-destination-card"
+            >
+
+                <img
+                    src="fotos/kurdistan/Erbil.jpg"
+                    alt="Kurdistan"
+                >
+
+                <div class="home-destination-overlay"></div>
+
+                <div class="home-destination-info">
+
+                    <p>Kurdistan Region</p>
+
+                    <h3>Kurdistan</h3>
+
+                    <span>
+                        Explore →
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    
+    <section class="home-new-journey">
+
+        <div class="home-new-journey-image">
+
+            <img
+                src="fotos/pool.png"
+                alt="Travel"
+            >
+
+        </div>
+
+
+        <div class="home-new-journey-text">
+
+            <p class="home-small-title">
+                SUSU HORIZON TRAVEL
+            </p>
+
+            <h2>
+                Your Journey,
+                <br>
+                Our Passion
+            </h2>
+
+            <p>
+                At Susu Horizon Travel, we believe travel is
+                more than reaching a destination.
+            </p>
+
+            <p>
+                We help people discover new places,
+                enjoy their journey and create great memories.
+            </p>
+
+            <a href="hotels.html">
+                Find Hotels →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="hotel-benefits">
+
+        <div>
+            <span>✈</span>
+
+            <h3>Great Destinations</h3>
+
+            <p>
+                Discover beautiful places around the world.
+            </p>
+        </div>
+
+
+        <div>
+            <span>🏨</span>
+
+            <h3>Hotels</h3>
+
+            <p>
+                Find hotels for your next journey.
+            </p>
+        </div>
+
+
+        <div>
+            <span>🎧</span>
+
+            <h3>Support</h3>
+
+            <p>
+                We are here to help you.
+            </p>
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

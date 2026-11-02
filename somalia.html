@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Mogadishu | Susu Horizon</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dubai-page">
+
+    
+    <header class="dubai-header">
+
+        <a href="home.html">
+            <img src="fotos/logo.png" alt="Susu Horizon Logo">
+        </a>
+
+    </header>
+
+
+    
+    <section class="dubai-destinations">
+
+        <h1>Discover Mogadishu's Most Popular Places</h1>
+
+        <p class="dubai-subtitle">
+            Discover the beauty of Mogadishu.
+        </p>
+
+
+
+        <div class="selected-trip">
+
+            <p>
+                📅 Date:
+                <span id="selectedDate"></span>
+            </p>
+
+            <p>
+                💶 Budget:
+                <span id="selectedPrice"></span>
+            </p>
+
+        </div>
+
+
+        
+        <div class="dubai-grid">
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/somalia/liido.png"
+                    alt="Liido Beach"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Liido Beach</h3>
+
+                    <p>📍 Mogadishu, Somalia</p>
+
+                    <p>⭐ 4.8</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/somalia/jazeera.png"
+                    alt="Jazeera Beach"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Jazeera Beach</h3>
+
+                    <p>📍 Mogadishu, Somalia</p>
+
+                    <p>⭐ 4.7</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/somalia/mosque.png"
+                    alt="Islamic Solidarity Mosque"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Islamic Solidarity Mosque</h3>
+
+                    <p>📍 Mogadishu, Somalia</p>
+
+                    <p>⭐ 4.8</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/somalia/beertanabada.png"
+                    alt="Beerta Nabadda"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Beerta Nabadda</h3>
+
+                    <p>📍 Mogadishu, Somalia</p>
+
+                    <p>⭐ 4.6</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/somalia/stadium.png"
+                    alt="Mogadishu Stadium"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Mogadishu Stadium</h3>
+
+                    <p>📍 Mogadishu, Somalia</p>
+
+                    <p>⭐ 4.7</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/somalia/lighthouse.png"
+                    alt="Mogadishu Lighthouse"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Mogadishu Lighthouse</h3>
+
+                    <p>📍 Mogadishu, Somalia</p>
+
+                    <p>⭐ 4.6</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+        <a href="home.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </section>
+
+
+    
+    <script>
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const date =
+            params.get("date");
+
+        const price =
+            params.get("price");
+
+        document.getElementById("selectedDate").textContent =
+            date;
+
+        document.getElementById("selectedPrice").textContent =
+            price;
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotels | Susu Horizon Travel</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="hotels-page">
+
+    <!-- NAVBAR -->
+    <nav class="hotel-navbar">
+
+        <a href="home.html" class="hotel-logo">
+            <img src="fotos/logo.png" alt="Susu Horizon Logo">
+        </a>
+
+        <div class="hotel-nav-links">
+            <a href="home.html">Home</a>
+            <a href="home.html#destinationSearch">Destinations</a>
+            <a href="hotels.html" class="active">Hotels</a>
+        </div>
+
+        <div class="hotel-nav-right">
+
+            <select>
+                <option>EN</option>
+                <option>NL</option>
+            </select>
+
+            <button>Contact Us</button>
+
+        </div>
+
+    </nav>
+
+
+    
+    <section class="hotel-hero">
+
+        <div class="hotel-hero-overlay"></div>
+
+        <div class="hotel-hero-text">
+
+            <h1>Find Your Perfect Hotel</h1>
+
+            <p>
+                Find a comfortable place for your next journey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="hotel-search-box">
+
+        <div class="hotel-search-item">
+
+            <label>Destination</label>
+
+            <select id="hotelDestination">
+                <option value="">Choose destination</option>
+                <option value="dubai">Dubai</option>
+                <option value="maldives">Maldives</option>
+                <option value="somalia">Somalia</option>
+                <option value="kurdistan">Kurdistan</option>
+            </select>
+
+        </div>
+
+
+        <div class="hotel-search-item">
+
+            <label>Check-in</label>
+
+            <input type="date" id="checkin">
+
+
+        </div>
+
+
+        <div class="hotel-search-item">
+
+            <label>Check-out</label>
+
+            <input type="date" id="checkout">
+
+        </div>
+
+
+        <div class="hotel-search-item">
+
+            <label>Guests</label>
+
+            <select id="guests">
+                <option>1 Guest</option>
+                <option selected>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+            </select>
+
+        </div>
+
+
+        <button class="hotel-search-button" id="hotelSearchButton">
+            Search Hotels
+        </button>
+
+    </section>
+
+
+    
+    <section class="hotel-destinations">
+
+        <button class="destination-filter active-filter" data-country="all">
+            All
+        </button>
+
+        <button class="destination-filter" data-country="dubai">
+            Dubai
+        </button>
+
+        <button class="destination-filter" data-country="maldives">
+            Maldives
+        </button>
+
+        <button class="destination-filter" data-country="somalia">
+            Somalia
+        </button>
+
+        <button class="destination-filter" data-country="kurdistan">
+            Kurdistan
+        </button>
+
+    </section>
+
+
+    
+    <section class="popular-hotels">
+
+        <div class="hotel-title">
+
+            <div>
+                <h2>Popular Hotels</h2>
+                <p>Find a hotel for your next trip.</p>
+            </div>
+
+        </div>
+
+
+        <div class="hotel-grid">
+
+
+            
+            <div class="hotel-card" data-country="dubai">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="fotos/dubai/Burj arab.png"
+                        alt="Dubai Hotel"
+                    >
+
+                    <span class="hotel-country">
+                        Dubai
+                    </span>
+
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3>Horizon Palm Hotel</h3>
+
+                    <p class="hotel-location">
+                        📍 Dubai, UAE
+                    </p>
+
+                    <p class="hotel-rating">
+                        ⭐ 4.8
+                    </p>
+
+                    <div class="hotel-bottom">
+
+                        <div>
+                            <strong>€220</strong>
+                            <span>/ night</span>
+                        </div>
+
+                        <a href="dhotel.html" class="view-hotel">View Hotel →</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="hotel-card" data-country="maldives">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="fotos/maldives/Ari.jpg"
+                        alt="Maldives Hotel"
+                    >
+
+                    <span class="hotel-country">
+                        Maldives
+                    </span>
+
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3>Ari Ocean Resort</h3>
+
+                    <p class="hotel-location">
+                        📍 Ari Atoll, Maldives
+                    </p>
+
+                    <p class="hotel-rating">
+                        ⭐ 4.9
+                    </p>
+
+                    <div class="hotel-bottom">
+
+                        <div>
+                            <strong>€280</strong>
+                            <span>/ night</span>
+                        </div>
+
+                      <a href="ari.html" class="view-hotel">View Hotel →</a>
+                      
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="hotel-card" data-country="somalia">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="fotos/somalia/liido.png"
+                        alt="Somalia Hotel"
+                    >
+
+                    <span class="hotel-country">
+                        Somalia
+                    </span>
+
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3>Liido Beach Hotel</h3>
+
+                    <p class="hotel-location">
+                        📍 Mogadishu, Somalia
+                    </p>
+
+                    <p class="hotel-rating">
+                        ⭐ 4.6
+                    </p>
+
+                    <div class="hotel-bottom">
+
+                        <div>
+                            <strong>€95</strong>
+                            <span>/ night</span>
+                        </div>
+
+                            <a href="lido.html" class="view-hotel">View Hotel →</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="hotel-card" data-country="kurdistan">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="fotos/kurdistan/Erbil.jpg"
+                        alt="Kurdistan Hotel"
+                    >
+
+                    <span class="hotel-country">
+                        Kurdistan
+                    </span>
+
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3>Erbil Horizon Hotel</h3>
+
+                    <p class="hotel-location">
+                        📍 Erbil, Kurdistan
+                    </p>
+
+                    <p class="hotel-rating">
+                        ⭐ 4.7
+                    </p>
+
+                    <div class="hotel-bottom">
+
+                        <div>
+                            <strong>€120</strong>
+                            <span>/ night</span>
+                        </div>
+
+                        <a href="erbil.html" class="view-hotel">View Hotel →</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="hotel-card" data-country="dubai">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="fotos/dubai/marina.png"
+                        alt="Dubai Marina Hotel"
+                    >
+
+                    <span class="hotel-country">
+                        Dubai
+                    </span>
+
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3>Marina View Hotel</h3>
+
+                    <p class="hotel-location">
+                        📍 Dubai Marina
+                    </p>
+
+                    <p class="hotel-rating">
+                        ⭐ 4.7
+                    </p>
+
+                    <div class="hotel-bottom">
+
+                        <div>
+                            <strong>€180</strong>
+                            <span>/ night</span>
+                        </div>
+
+                        <a href="marina.html" class="view-hotel">View Hotel →</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="hotel-card" data-country="maldives">
+
+                <div class="hotel-image">
+
+                    <img
+                        src="fotos/maldives/maafushi.jpg"
+                        alt="Maafushi Hotel"
+                    >
+
+                    <span class="hotel-country">
+                        Maldives
+                    </span>
+
+                </div>
+
+                <div class="hotel-info">
+
+                    <h3>Maafushi Island Resort</h3>
+
+                    <p class="hotel-location">
+                        📍 Maafushi, Maldives
+                    </p>
+
+                    <p class="hotel-rating">
+                        ⭐ 4.8
+                    </p>
+
+                    <div class="hotel-bottom">
+
+                        <div>
+                            <strong>€190</strong>
+                            <span>/ night</span>
+                        </div>
+
+                        <a href="mafushi.html" class="view-hotel">View Hotel →</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    
+    <section class="hotel-offer">
+
+        <div>
+
+            <p class="offer-small">
+                SPECIAL OFFERS
+            </p>
+
+            <h2>
+                Save Up to 30%
+            </h2>
+
+            <p>
+                Discover special hotel deals for your next journey.
+            </p>
+
+            <button>
+                View Deals →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    
+    <section class="hotel-benefits">
+
+        <div>
+            <span>✓</span>
+            <h3>Best Price</h3>
+            <p>Great hotel prices</p>
+        </div>
+
+        <div>
+            <span>🔒</span>
+            <h3>Safe Booking</h3>
+            <p>Simple and secure</p>
+        </div>
+
+        <div>
+            <span>🎧</span>
+            <h3>24/7 Support</h3>
+            <p>We are here for you</p>
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

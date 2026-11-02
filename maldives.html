@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maldives | Susu Horizon Travel</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dubai-page">
+
+    
+    <header class="dubai-header">
+
+        <a href="home.html">
+            <img src="fotos/logo.png" alt="Susu Horizon Logo">
+        </a>
+
+    </header>
+
+
+    
+    <section class="dubai-destinations">
+
+        <h1>Discover Maldives' Most Popular Places</h1>
+
+        <p class="dubai-subtitle">
+            Discover the beautiful islands of the Maldives.
+        </p>
+
+
+        
+        <div class="selected-trip">
+
+            <p>
+                📅 Date:
+                <span id="selectedDate"></span>
+            </p>
+
+            <p>
+                💶 Budget:
+                <span id="selectedPrice"></span>
+            </p>
+
+        </div>
+
+
+        
+        <div class="dubai-grid">
+
+
+            <!-- ARI ATOLL -->
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/maldives/Ari.jpg"
+                    alt="Ari Atoll"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Ari Atoll</h3>
+
+                    <p>📍 Maldives</p>
+
+                    <p>⭐ 4.8</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/maldives/banana.jpg"
+                    alt="Banana Reef"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Banana Reef</h3>
+
+                    <p>📍 North Malé Atoll</p>
+
+                    <p>⭐ 4.7</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/maldives/hulhumale.jpg"
+                    alt="Hulhumale"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Hulhumalé</h3>
+
+                    <p>📍 Maldives</p>
+
+                    <p>⭐ 4.6</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/maldives/Male.jpg"
+                    alt="Male"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Malé</h3>
+
+                    <p>📍 Maldives</p>
+
+                    <p>⭐ 4.5</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/maldives/maafushi.jpg"
+                    alt="Maafushi Island"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Maafushi Island</h3>
+
+                    <p>📍 Kaafu Atoll, Maldives</p>
+
+                    <p>⭐ 4.7</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/maldives/vaadhoo.jpg"
+                    alt="Vaadhoo Island"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Vaadhoo Island</h3>
+
+                    <p>📍 Maldives</p>
+
+                    <p>⭐ 4.8</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        
+        <a href="home.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </section>
+
+
+    
+    <script>
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const date =
+            params.get("date");
+
+        const price =
+            params.get("price");
+
+
+        document.getElementById("selectedDate").textContent =
+            date || "Not selected";
+
+        document.getElementById("selectedPrice").textContent =
+            price || "Not selected";
+
+    </script>
+
+
+</body>
+
+</html>

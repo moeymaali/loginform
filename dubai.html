@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Dubai | Susu Horizon</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body class="dubai-page">
+
+
+    
+    <header class="dubai-header">
+
+        <a href="home.html">
+
+            <img
+                src="fotos/logo.png"
+                alt="Susu Horizon Logo"
+            >
+
+        </a>
+
+    </header>
+
+
+
+    
+    <section class="dubai-destinations">
+
+
+        
+        <h1>Discover Dubai's Most Popular Places</h1>
+
+
+        <p class="dubai-subtitle">
+            Your next adventure starts here.
+        </p>
+
+
+
+        
+        <div class="selected-trip">
+
+            <p>
+                📅 Date:
+                <span id="selectedDate"></span>
+            </p>
+
+            <p>
+                💶 Budget:
+                <span id="selectedPrice"></span>
+            </p>
+
+        </div>
+
+
+
+        
+        <div class="dubai-grid">
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/dubai/Burj arab.png"
+                    alt="Burj Al Arab"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Burj Al Arab</h3>
+
+                    <p>📍 Dubai, UAE</p>
+
+                    <p>⭐ 4.7</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/dubai/kalifa.jpg"
+                    alt="Burj Khalifa"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Burj Khalifa</h3>
+
+                    <p>📍 Downtown Dubai</p>
+
+                    <p>⭐ 4.8</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/dubai/Museum.png"
+                    alt="Museum of the Future"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Museum of the Future</h3>
+
+                    <p>📍 Dubai, UAE</p>
+
+                    <p>⭐ 4.6</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/dubai/palm.png"
+                    alt="Palm Jumeirah"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Palm Jumeirah</h3>
+
+                    <p>📍 Dubai, UAE</p>
+
+                    <p>⭐ 4.8</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/dubai/marina.png"
+                    alt="Dubai Marina"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Dubai Marina</h3>
+
+                    <p>📍 Dubai, UAE</p>
+
+                    <p>⭐ 4.7</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/dubai/safari.png"
+                    alt="Desert Safari"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Desert Safari</h3>
+
+                    <p>📍 Dubai Desert</p>
+
+                    <p>⭐ 4.8</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        
+        <a href="home.html" class="back-home">
+            ← Back to Home
+        </a>
+
+
+    </section>
+
+
+
+    
+    <script>
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+
+        const date =
+            params.get("date");
+
+
+        const price =
+            params.get("price");
+
+
+        document.getElementById("selectedDate").textContent =
+            date;
+
+
+        document.getElementById("selectedPrice").textContent =
+            price;
+
+    </script>
+
+
+</body>
+
+</html>

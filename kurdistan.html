@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Kurdistan | Susu Horizon</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dubai-page">
+
+    
+    <header class="dubai-header">
+
+        <a href="home.html">
+            <img src="fotos/logo.png" alt="Susu Horizon Logo">
+        </a>
+
+    </header>
+
+
+    <
+    <section class="dubai-destinations">
+
+        <h1>Discover Kurdistan's Most Popular Places</h1>
+
+        <p class="dubai-subtitle">
+            Discover the beauty of Kurdistan.
+        </p>
+
+
+        
+        <div class="selected-trip">
+
+            <p>
+                📅 Date:
+                <span id="selectedDate"></span>
+            </p>
+
+            <p>
+                💶 Budget:
+                <span id="selectedPrice"></span>
+            </p>
+
+        </div>
+
+
+        
+        <div class="dubai-grid">
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/kurdistan/Erbil.jpg"
+                    alt="Erbil Citadel"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Erbil Citadel</h3>
+
+                    <p>📍 Erbil, Kurdistan</p>
+                     <p>⭐ 4.4</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/kurdistan/sulaymaniyah.jpg"
+                    alt="Sulaymaniyah"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Sulaymaniyah</h3>
+
+                    <p>📍 Sulaymaniyah, Kurdistan</p>
+                     <p>⭐ 4.3</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/kurdistan/Gali.jpg"
+                    alt="Gali Ali Beg Waterfall"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Gali Ali Beg Waterfall</h3>
+
+                    <p>📍 Rawanduz, Kurdistan</p>
+                     <p>⭐ 4.8</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/kurdistan/Amedi.jpg"
+                    alt="Amedi"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Amedi (Amadiya)</h3>
+
+                    <p>📍 Duhok, Kurdistan</p>
+                     <p>⭐ 4.3</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/kurdistan/Dukan.jpg"
+                    alt="Dukan Lake"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Dukan Lake</h3>
+
+                    <p>📍 Sulaymaniyah, Kurdistan</p>
+                     <p>⭐ 4.7</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="dubai-card">
+
+                <img
+                    src="fotos/kurdistan/Korek.jpg"
+                    alt="Korek Mountain"
+                >
+
+                <div class="dubai-info">
+
+                    <h3>Korek Mountain</h3>
+
+                    <p>📍 Rawanduz, Kurdistan</p>
+                     <p>⭐ 4.9</p>
+
+                    <span class="arrow">↗</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        
+        <a href="home.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </section>
+
+
+    
+    <script>
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const date =
+            params.get("date");
+
+        const price =
+            params.get("price");
+
+        document.getElementById("selectedDate").textContent =
+            date;
+
+        document.getElementById("selectedPrice").textContent =
+            price;
+
+    </script>
+
+</body>
+
+</html>

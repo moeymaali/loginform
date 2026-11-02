@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina View Hotel | Susu Horizon Travel</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="booking-page">
+
+    
+    <header class="booking-nav">
+        <a href="hotels.html">← Back to Hotels</a>
+        <h2>Susu Horizon <span>Travel</span></h2>
+    </header>
+
+    
+    <section class="booking-hero">
+        <div class="booking-hero-content">
+            <p class="booking-label">DUBAI · UNITED ARAB EMIRATES</p>
+            <h1>Marina View Hotel</h1>
+            <p>Luxury, comfort and unforgettable stays in Dubai.</p>
+
+            <div class="booking-stars">
+                ★★★★★ <span>4.8 · Dubai, UAE</span>
+            </div>
+
+            <a href="#rooms" class="booking-explore">
+                Explore Our Rooms ↓
+            </a>
+        </div>
+    </section>
+
+    <main class="booking-container">
+
+        
+        <section id="rooms" class="room-options">
+
+            <div class="booking-section-heading">
+                <p class="booking-label">EXCLUSIVE ACCOMMODATION</p>
+                <h2>Choose Your Perfect Room</h2>
+                <p>Discover our beautiful hotel rooms.</p>
+            </div>
+
+            
+            <article class="booking-room selected" data-room="standard">
+                <div class="room-image">
+                    <img src="fotos/hotels/1.jpg" alt="Standard Room">
+                    <span class="room-badge">COMFORT</span>
+                </div>
+
+                <div class="room-content">
+                    <p class="room-rating">★★★★★ 4.5</p>
+                    <h3>Standard Room</h3>
+                    <p>Comfortable king bed, free Wi-Fi and modern bathroom.</p>
+
+                    <div class="room-features">
+                        <span>🛏 King Bed</span>
+                        <span>📶 Wi-Fi</span>
+                    </div>
+
+                    <div class="room-bottom">
+                        <div>
+                            <strong>€90</strong>
+                            <small>/ night</small>
+                        </div>
+                        <button type="button" class="choose-room"
+                                data-room="standard">
+                            Select Room
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="booking-room" data-room="deluxe">
+                <div class="room-image">
+                    <img src="fotos/hotels/2.jpg" alt="Deluxe Room">
+                    <span class="room-badge gold-badge">MOST POPULAR</span>
+                </div>
+
+                <div class="room-content">
+                    <p class="room-rating">★★★★★ 4.8</p>
+                    <h3>Deluxe Room</h3>
+                    <p>Spacious luxury bedroom with elegant interior and extra comfort.</p>
+
+                    <div class="room-features">
+                        <span>🛏 King Bed</span>
+                        <span>✨ Deluxe</span>
+                    </div>
+
+                    <div class="room-bottom">
+                        <div>
+                            <strong>€150</strong>
+                            <small>/ night</small>
+                        </div>
+                        <button type="button" class="choose-room"
+                                data-room="deluxe">
+                            Select Room
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="booking-room" data-room="premium">
+                <div class="room-image">
+                    <img src="fotos/hotels/3.jpg" alt="Premium Suite">
+                    <span class="room-badge gold-badge">PREMIUM</span>
+                </div>
+
+                <div class="room-content">
+                    <p class="room-rating">★★★★★ 5.0</p>
+                    <h3>Premium Suite</h3>
+                    <p>Exclusive luxury suite with beautiful views and premium comfort.</p>
+
+                    <div class="room-features">
+                        <span>🛏 King Bed</span>
+                        <span>🌆 City View</span>
+                    </div>
+
+                    <div class="room-bottom">
+                        <div>
+                            <strong>€250</strong>
+                            <small>/ night</small>
+                        </div>
+                        <button type="button" class="choose-room"
+                                data-room="premium">
+                            Select Room
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        
+        <section class="booking-section" id="bookingSection">
+
+            <div class="booking-section-heading">
+                <p class="booking-label">YOUR RESERVATION</p>
+                <h2>Complete Your Booking</h2>
+                <p>Choose your room, dates and guests.</p>
+            </div>
+
+            <div class="booking-layout">
+
+                
+                <div class="booking-preview">
+                    <img id="selectedImage"
+                         src="fotos/hotels/1.jpg"
+                         alt="Selected Hotel Room">
+
+                    <div class="booking-preview-info">
+                        <h3 id="selectedRoomName">Standard Room</h3>
+                        <p id="selectedRoomPrice">€90 per night</p>
+                        <p>Marina View Hotel · Dubai</p>
+                    </div>
+                </div>
+
+                
+                <div class="booking-panel">
+                    <h2>Your Booking</h2>
+
+                    <label for="roomSelect">Choose Your Room</label>
+                    <select id="roomSelect">
+                        <option value="standard">Standard Room - €90/night</option>
+                        <option value="deluxe">Deluxe Room - €150/night</option>
+                        <option value="premium">Premium Suite - €250/night</option>
+                    </select>
+
+                    <div class="booking-fields">
+                        <div>
+                            <label for="checkin">Check-in</label>
+                            <input type="date" id="checkin" required>
+                        </div>
+
+                        <div>
+                            <label for="checkout">Check-out</label>
+                            <input type="date" id="checkout" required>
+                        </div>
+                    </div>
+
+                    <label for="guests">Guests</label>
+                    <select id="guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                    </select>
+
+                    
+                    <div class="booking-summary">
+                        <h3>Booking Summary</h3>
+
+                        <div class="summary-row">
+                            <span>Room</span>
+                            <strong id="roomName">Standard Room</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Price per night</span>
+                            <strong id="nightPrice">€90</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Number of nights</span>
+                            <strong id="nights">0</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Guests</span>
+                            <strong id="guestCount">2</strong>
+                        </div>
+
+                        <hr>
+
+                        <div class="summary-row total-row">
+                            <strong>Total Price</strong>
+                            <strong id="total">€0</strong>
+                        </div>
+                    </div>
+
+                    <button type="button" id="bookNow">
+                        Confirm Booking
+                    </button>
+
+                    <p id="message" role="status"></p>
+
+                    <small>
+                        Demo booking only. No real payment or reservation.
+                    </small>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="booking-footer">
+        <h3>Susu Horizon Travel</h3>
+        <p>Discover the world. Stay in comfort.</p>
+    </footer>
+
+</body>
+</html>
