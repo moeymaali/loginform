@@ -119,7 +119,6 @@ if (loginForm) {
 const showPasswordButton =
     document.getElementById("showPassword");
 
-
 if (showPasswordButton) {
 
     showPasswordButton.addEventListener("click", function() {
@@ -580,3 +579,32 @@ if (checkinDate && checkoutDate) {
     }, true);
 }
 
+
+
+
+
+
+
+//hotel availability check
+const hotel = {
+    name: "Horizon Palm Hotel",
+    bookedDates: [
+        "2026-12-20",
+        "2026-12-21",
+        "2026-12-22",
+    ]  
+};
+
+
+const bookedDates = [
+    "2026-12-20",
+    "2026-12-21",
+    "2026-12-22"
+];
+
+const selectedDates = "2026-12-21"; 
+if (bookedDates.includes(selectedDates)) {
+    console.log("Fully booked  .");
+} else {
+    console.log("Available.");
+};
