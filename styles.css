@@ -2318,3 +2318,23 @@ body {
     background: #444;
     color: white;
 }   
+/* Hotel availability status */
+
+.availability-status {
+    display: inline-block;
+    padding: 7px 14px;
+    margin: 10px 0;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #ffe5e5;
+    color: #c0392b;
+}
+
+.view-hotel .disabled-button{
+    background-color: #999;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+}

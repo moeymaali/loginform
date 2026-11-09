@@ -586,25 +586,88 @@ if (checkinDate && checkoutDate) {
 
 
 //hotel availability check
-const hotel = {
-    name: "Horizon Palm Hotel",
-    bookedDates: [
-        "2026-12-20",
-        "2026-12-21",
-        "2026-12-22",
-    ]  
-};
+const hotels = [
+    {
+        name: "Horizon Palm Hotel",
+        bookedDates: ["2026-11-10", "2026-11-11", "2026-11-12"]
+    },
+    {
+        name: "Marina View Hotel",
+        bookedDates: ["2026-11-15", "2026-11-16", "2026-11-17"]
+    },
+    {
+        name: "Ari Ocean Resort",
+        bookedDates: ["2026-11-20", "2026-11-21", "2026-11-22"]
+    },
+    {
+        name: "Liido Beach Hotel",
+        bookedDates: ["2026-11-25", "2026-11-26", "2026-11-27"]
 
-
-const bookedDates = [
-    "2026-12-20",
-    "2026-12-21",
-    "2026-12-22"
+    },
+    {
+        name: "Erbil Horizon Hotel",
+        bookedDates: ["2026-11-30"]
+    },
+    {
+        name: "Maafushi Island Resort",
+        bookedDates: ["2026-11-28"]
+    }
 ];
 
-const selectedDates = "2026-12-21"; 
-if (bookedDates.includes(selectedDates)) {
-    console.log("Fully booked  .");
-} else {
-    console.log("Available.");
-};
+const availabilityButton = document.getElementById("hotelSearchButton");
+if (availabilityButton) {
+    availabilityButton.addEventListener("click", function () {
+        const checkin = document.getElementById("checkin").value;
+        const checkout = document.getElementById("checkout").value;
+        if (!checkin || !checkout || checkout <= checkin) {
+            alert("Please select valid check-in and check-out dates.");
+            return;
+        }
+        const hotelcards = document.querySelectorAll(".hotel-card");
+        hotelcards.forEach(function (card) {
+            const hotelName = card.querySelector("h3");
+            if (!hotelName) return;
+            const hotel = hotels.find(function (item) {
+                return item.name === hotelName.textContent.trim();
+            });
+            if (!hotel) return;
+            let status = card.querySelector(".availability-status");
+            if (!status) {
+                status = document.createElement("p");
+                status.className = "availability-status";
+                hotelName.after(status);
+            }
+
+            const fullybooked = hotel.bookedDates.some(function (date) {
+                return date >= checkin && date < checkout;
+            });
+            const viewButton = card.querySelector(".view-hotel");
+            if (viewButton && !viewButton.dataset.originalHref) {
+                viewButton.dataset.originalHref = viewButton.getAttribute("href");
+            }
+            if (fullybooked) {
+                status.textContent = "Fully Booked";
+                status.style.color = "#c0392b";
+                status.style.backgroundColor = "#ffe5e5";
+
+                if (viewButton) {
+                    viewButton.classList.add("disabled-button");
+                    viewButton.removeAttribute("href");
+                    vieuwButton.setAttribute("aria-disabled", "true");
+                }
+
+            } else {
+                status.textContent = "";
+                status.style.backgroundColor = "transparent";
+
+                if (viewButton) {
+                    viewButton.classList.remove("disabled-button");
+                    viewButton.setAttribute("href", viewButton.dataset.originalHref);
+                    viewButton.removeAttribute("aria-disabled");
+                }
+            }
+            
+        });
+    });
+}
+
