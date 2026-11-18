@@ -2339,34 +2339,61 @@ body {
     pointer-events: none;
 }
 
-#trip-budget {
-    width: 110%;
-    padding: 10px;
+.dubai-page .trip-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 24px auto;
+    padding: 18px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #00000010;
+}
+
+.dubai-page .trip-controls label {
+    margin: 0;
+    font-weight: 600;
+}
+
+.dubai-page #trip-budget {
+    width: 120px;
+    max-width: 100%;
+    flex: 0 0 120px;
+    box-sizing: border-box;
+    padding: 11px;
+    margin: 0;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
-#plan-trip {
-    padding: 11px 20px;
-    margin: 10px;
+
+.dubai-page #plan-trip {
+    width: auto;
+    margin: 0;
+    padding: 12px 20px;
+}
+
+.dubai-page #trip-result:not(:empty) {
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 18px 24px;
+    background: white;
+    border-radius: 12px;
+}
+.dubai-page #plan-trip {
     background: #075c60;
-    color: white;   
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
 }
-#plan-trip:hover {
+
+.dubai-page #plan-trip:hover {
     background: #08484b;
-}
-#trip-result:not(empty) {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px #00000015;
-    font-weight: bold;
-}
-.trip-place {
-    accent-color: #075c60;
-    margin-right: 6px;
 }
