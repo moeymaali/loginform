@@ -63,7 +63,12 @@
 
         </div>
 
+        <label for="trip-budget">Maximum budget (€)</label>
+        <input id="trip-budget" type="number" min="0" step="1" value="1000" required>
 
+        <button id="plan-trip" type="button">Plan My Trip</button>
+
+        <p id="trip-result" aria-live="polite"></p>
 
         
         <div class="dubai-grid">
@@ -80,6 +85,10 @@
                 <div class="dubai-info">
 
                     <h3>Burj Al Arab</h3>
+                    <label>
+    <input type="checkbox" class="trip-place" value="950">
+    Add to my trip (€950)
+</label>
 
                     <p>📍 Dubai, UAE</p>
 
@@ -104,6 +113,10 @@
                 <div class="dubai-info">
 
                     <h3>Burj Khalifa</h3>
+                    <label>
+    <input type="checkbox" class="trip-place" value="800">
+    Add to my trip (€800)
+</label>
 
                     <p>📍 Downtown Dubai</p>
 
@@ -128,6 +141,10 @@
                 <div class="dubai-info">
 
                     <h3>Museum of the Future</h3>
+                    <label>
+    <input type="checkbox" class="trip-place" value="650">
+    Add to my trip (€650)
+</label>
 
                     <p>📍 Dubai, UAE</p>
 
@@ -152,6 +169,10 @@
                 <div class="dubai-info">
 
                     <h3>Palm Jumeirah</h3>
+                    <label>
+    <input type="checkbox" class="trip-place" value="850">
+    Add to my trip (€850)
+</label>
 
                     <p>📍 Dubai, UAE</p>
 
@@ -176,7 +197,10 @@
                 <div class="dubai-info">
 
                     <h3>Dubai Marina</h3>
-
+                    <label>
+    <input type="checkbox" class="trip-place" value="700">
+    Add to my trip (€700)
+</label>
                     <p>📍 Dubai, UAE</p>
 
                     <p>⭐ 4.7</p>
@@ -200,6 +224,10 @@
                 <div class="dubai-info">
 
                     <h3>Desert Safari</h3>
+                    <label>
+    <input type="checkbox" class="trip-place" value="550">
+    Add to my trip (€550)
+</label>
 
                     <p>📍 Dubai Desert</p>
 
@@ -227,30 +255,50 @@
 
 
     
-    <script>
+<script>
+    const params = new URLSearchParams(window.location.search);
 
-        const params =
-            new URLSearchParams(window.location.search);
+    document.getElementById("selectedDate").textContent =
+        params.get("date") || "—";
 
+    document.getElementById("selectedPrice").textContent =
+        params.get("price") || "—";
 
-        const date =
-            params.get("date");
+    const planTripButton = document.getElementById("plan-trip");
 
+    planTripButton.addEventListener("click", function () {
+        const budgetInput = document.getElementById("trip-budget");
+        const result = document.getElementById("trip-result");
 
-        const price =
-            params.get("price");
+        if (!budgetInput.reportValidity()) return;
 
+        const selectedPlaces =
+            document.querySelectorAll(".trip-place:checked");
 
-        document.getElementById("selectedDate").textContent =
-            date;
+        if (selectedPlaces.length === 0) {
+            result.textContent = "Choose at least one place.";
+            return;
+        }
 
+        let total = 0;
 
-        document.getElementById("selectedPrice").textContent =
-            price;
+        selectedPlaces.forEach(function (place) {
+            total += Number(place.value);
+        });
 
-    </script>
+        const remaining = Number(budgetInput.value) - total;
 
-
+        if (remaining < 0) {
+            result.textContent =
+                "Total: €" + total +
+                ". €" + Math.abs(remaining) + " over budget.";
+        } else {
+            result.textContent =
+                "Total: €" + total +
+                ". €" + remaining + " left in your budget.";
+        }
+    });
+</script>
 </body>
 
 </html>
