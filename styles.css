@@ -2338,3 +2338,22 @@ body {
     opacity: 0.5;
     pointer-events: none;
 }
+
+#trip-budget {
+    width: 110%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+#plan-trip {
+    padding: 11px 20px;
+    margin: 10px;
+    background: #075c60;
+    color: white;   
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#plan-trip:hover {
+    background: #08484b;
+}
