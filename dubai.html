@@ -63,12 +63,16 @@
 
         </div>
 
-        <label for="trip-budget">Maximum budget (€)</label>
-        <input id="trip-budget" type="number" min="0" step="1" value="1000" required>
+        <div class="trip-controls">
+            <label for="trip-budget">Maximum budget (€)</label>
 
-        <button id="plan-trip" type="button">Plan My Trip</button>
+             <input id="trip-budget" type="number"
+           min="0" step="1" value="1000" required>
 
-        <p id="trip-result" aria-live="polite"></p>
+            <button id="plan-trip" type="button">Plan My Trip</button>
+        </div>
+
+<p id="trip-result" aria-live="polite"></p>
 
         
         <div class="dubai-grid">

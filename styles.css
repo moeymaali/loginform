@@ -2357,3 +2357,16 @@ body {
 #plan-trip:hover {
     background: #08484b;
 }
+#trip-result:not(empty) {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000015;
+    font-weight: bold;
+}
+.trip-place {
+    accent-color: #075c60;
+    margin-right: 6px;
+}
